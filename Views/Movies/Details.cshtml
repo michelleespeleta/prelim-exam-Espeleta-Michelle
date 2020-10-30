@@ -1,0 +1,58 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="custom-container">
+    <h1 class="page-title">Details</h1>
+
+    <div>
+        <h4 class="subheading">Movie</h4>
+        <hr />
+        <dl class="row not-a-table">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.ReleaseDate)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Genre)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Rating)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+            <dt class="col-sm-4">
+                Director
+            </dt>
+            <dd class="col-sm-8">
+                @ViewBag.DirectorName
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.ID" class="back-to-list">Edit</a> |
+        <a asp-action="Index" class="back-to-list">Back to List</a>
+    </div>
+</div>
+
+
